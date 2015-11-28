@@ -76,7 +76,7 @@ func postt(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
     //longitude, _ := lng.(float64);
     
     //fmt.Println("The latittude",lat,"and the longitude",lng)
-    mgoSession, err := mgo.Dial("mongodb://goassignment:goassignment@ds043714.mongolab.com:43714/goassignment")
+    mgoSession, err := mgo.Dial("mongodb://goassignment:goassignment@ds057214.mongolab.com:57214/goassignment")
 
     // Check if connection error, is mongo running? 
     if err != nil {
@@ -153,7 +153,7 @@ func gett(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
       id := p.ByName("id")
       number, _:= strconv.Atoi(id)
       
-    mgoSession, err := mgo.Dial("mongodb://goassignment:goassignment@ds043714.mongolab.com:43714/goassignment")
+    mgoSession, err := mgo.Dial("mongodb://goassignment:goassignment@ds057214.mongolab.com:57214/goassignment")
 // https://api.mongolab.com/api/1/databases?apiKey=NehIyTKy-1dStg0RKySzPjAWpKd39ful
     //mongodb://goassignment:goassignment@ds043714.mongolab.com:43714/goassignment
     // Check if connection error, is mongo running? 
@@ -186,7 +186,7 @@ func delete(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
     
 
       
-    mgoSession, err := mgo.Dial("mongodb://goassignment:goassignment@ds043714.mongolab.com:43714/goassignment")
+    mgoSession, err := mgo.Dial("mongodb://goassignment:goassignment@ds057214.mongolab.com:57214/goassignment")
     // Check if connection error, is mongo running? 
     if err != nil {
         panic(err)
@@ -210,7 +210,7 @@ func put(w http.ResponseWriter, r *http.Request, p httprouter.Params){
   id := p.ByName("id")
   number, _:=strconv.Atoi(id)
 
-    mgoSession, err := mgo.Dial("mongodb://goassignment:goassignment@ds043714.mongolab.com:43714/goassignment");
+    mgoSession, err := mgo.Dial("mongodb://goassignment:goassignment@ds057214.mongolab.com:57214/goassignment");
     if err!=nil{
         panic(err)
     }
